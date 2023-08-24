@@ -8,12 +8,15 @@
 
     /* SD = sidebar */
     /* IN = inicio */
+    /* CT = categoria */
+    /* FL = filmes */
 
     display: grid;
     grid-template-columns: 90px;
-    grid-template-rows: 100px 500px;
+    grid-template-rows: 100px 500px 700px;
     grid-template-areas: 'SD SD SD'
-                         'IN IN IN';
+                         'IN IN IN'
+                         'FL FL FL';
 }
 
 .Sidebar{
@@ -21,17 +24,48 @@
     background-color: white;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
 }
 
 .Inicio{
     grid-area: IN;
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/cc60ac20-f396-4bc8-bbdc-8c5ee01ff1b0/BR-en-20230821-popsignuptwoweeks-perspective_alpha_website_large.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     
 }
+
+.filmes{
+   
+    grid-area: FL;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 300px);
+    gap: 24px;
+    margin-top: 64px;
+    margin-left: 64px;
+    margin-right: 64px;
+
+}
+
+.boxfilme{
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    background-image: url(https://i.pinimg.com/236x/04/f2/9b/04f29b61e4295fc9a285620df36e9626.jpg);
+
+
+}
+
+
 
 .titulo
 {
@@ -49,7 +83,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
     list-style: none;
     margin-right: 24px;
 }
@@ -59,6 +93,7 @@ a{
     font-family: 'Poppins', sans-serif;
     color: #E1DEE1;
     transition: all 0.5s;
+    font-size: 20px;
 }
 
 a:hover{
